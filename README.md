@@ -1,9 +1,7 @@
-# learning-keras
+# Learning Keras
 
-Learning Keras
+https://keras.io
 
-https://keras.io/
-
-# My Older ML/NN/AI Learning Repo
+# Simple ML/NN/AI from Built from Scratch
 
 https://github.com/hchiam/machineLearning
