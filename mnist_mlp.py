@@ -1,4 +1,5 @@
 # https://github.com/hchiam/keras/blob/master/examples/mnist_mlp.py
+# this example code automatically downloads data for you and runs
 
 '''Trains a simple deep NN on the MNIST dataset.
 Gets to 98.40% test accuracy after 20 epochs
