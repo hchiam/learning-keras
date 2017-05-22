@@ -1,3 +1,6 @@
+# https://keras.io/#getting-started-30-seconds-to-keras
+# Note: you need to supply data to x_train, y_train, x_test, y_test
+
 # create sequential model
 from keras.models import Sequential
 model = Sequential()
