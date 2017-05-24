@@ -1,5 +1,5 @@
 # Multilayer Perceptron (MLP) for multi-class softmax classification
-# source: https://keras.io/getting-started/sequential-model-guide/
+# original source: https://keras.io/getting-started/sequential-model-guide/
 
 import keras
 from keras.models import Sequential
