@@ -1,6 +1,5 @@
-# Usage example for image classification model
-# Classify ImageNet classes with ResNet50
-# original source: https://keras.io/applications/
+# example code to make use of the pre-trained image classification model ResNet50
+# original source code: https://keras.io/applications/
 
 from keras.applications.resnet50 import ResNet50
 from keras.preprocessing import image
