@@ -1,4 +1,4 @@
-# https://github.com/fchollet/keras/blob/master/examples/mnist_mlp.py
+# copied from: https://github.com/fchollet/keras/blob/master/examples/mnist_mlp.py
 # this example code automatically downloads data for you and runs
 
 '''Trains a simple deep NN on the MNIST dataset.
