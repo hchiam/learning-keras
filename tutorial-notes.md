@@ -60,10 +60,16 @@ VAE = generative model = creates probably likely output, instead of acting like 
 
 **more links:**
 
-http://cs231n.github.io/neural-networks-1/
-http://cs231n.github.io/convolutional-networks/
+https://cs231n.github.io/neural-networks-1/
+
+https://cs231n.github.io/convolutional-networks/
+
 https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
+
 https://blog.keras.io/building-autoencoders-in-keras.html
+
 https://github.com/fchollet/keras-resources
+
 https://www.youtube.com/watch?v=u4alGiomYP4
+
 https://www.youtube.com/watch?v=fTUwdXUFfI8
