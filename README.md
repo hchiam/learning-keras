@@ -2,6 +2,10 @@
 
 https://keras.io
 
+# Simple Image Classifier Code
+
+https://github.com/hchiam/learning-keras/blob/master/image_classifier.py
+
 # Tutorial Notes
 
 https://github.com/hchiam/learning-keras/blob/master/tutorial-notes.md
