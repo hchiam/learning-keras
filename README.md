@@ -9,3 +9,9 @@ https://github.com/hchiam/learning-keras/blob/master/tutorial-notes.md
 # Simple ML/NN/AI from Built from Scratch
 
 https://github.com/hchiam/machineLearning
+
+# Keras.js
+
+https://transcranial.github.io/keras-js
+
+https://github.com/transcranial/keras-js
