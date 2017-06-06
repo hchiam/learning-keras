@@ -70,6 +70,8 @@ https://blog.keras.io/building-autoencoders-in-keras.html
 
 https://github.com/fchollet/keras-resources
 
+https://github.com/fchollet/keras/tree/master/examples
+
 https://www.youtube.com/watch?v=u4alGiomYP4
 
 https://www.youtube.com/watch?v=fTUwdXUFfI8
