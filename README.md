@@ -2,7 +2,7 @@
 
 https://keras.io
 
-Just on of the things I'm learning. https://github.com/hchiam/learning
+Just one of the things I'm learning. https://github.com/hchiam/learning
 
 # Simple Image Classifier Code
 
