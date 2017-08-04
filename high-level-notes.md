@@ -2,7 +2,8 @@
 keras = higher level coding that can use tensorflow or theano
 
 tensorflow = more customization
-keras = quick building and testing
+
+keras = quick building and testing/experimenting
 
 # Basic flow:
 
