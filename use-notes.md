@@ -252,3 +252,28 @@ Or:
 
 https://developers.google.com/api-client-library/
 
+Need:
+1. Permission/authorization, for security: credentials file.
+2. Call API.
+
+* https://console.cloud.google.com
+* 3 lines icon -> API Manager -> Credentials -> Create Credentials -> Service Account Key
+* "New Service Account" + create name + set role as "Project -> Viewer"
+* Create -> should get a file -> rename to credentials.json -> save in folder
+* In code: project id, model name, credentials file. Also have input data ready.
+
+```py
+from oauth2client.client import GoogleCredentials
+import googleapiclient.discovery
+credentials = GoogleCredentials.from_stream(CREDENTIALS_FILE)
+service = googleapiclient.discovery.build('ml', 'v1', credentials=credentials)
+name = # <directory to model>
+response = service.projects().predict(
+  name=name,
+  body={'instances': inputs_for_prediction}
+).execute()
+if 'error' in response:
+  raise RunTimeError(response['error'])
+results = response['predictions']
+print(results)
+```
