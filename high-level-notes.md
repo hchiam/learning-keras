@@ -137,3 +137,36 @@ prediction = predictions[0][0]
 prediction = prediction - scaler.min_[8]
 prediction = prediction / scaler.scale_[8]
 ```
+
+# Add TensorBoard Logging
+
+Create data files in format tensorboard can read.
+
+```py
+logger = keras.callbacks.TensorBoard(
+  log_dir='logs', # you can use a sub-folder directory to get different runs to compare on TensorBoard
+  write_graph=True,
+  histogram_freq=5
+)
+```
+
+Add to model training:
+
+```py
+model.fit(
+  training_data, 
+  expected_output, 
+  epochs=50,
+  shuffle=True,
+  verbose=2,
+  callbacks=[logger]
+)
+```
+
+Name layers for easier reading:
+```py
+model.add(Dense(50, input_dim=9, activation='relu', name='layer_1'))
+# etc.
+```
+
+In Terminal: `tensorboard --log_dir=<logs folder>` (make sure that `<logs folder>` is the parent folder of any sub-folders for different runs). Then go to the URL that prints out to see TensorBoard. Graphs tab = flow chart. Scalars tab = compare runs from different sub-folders.
