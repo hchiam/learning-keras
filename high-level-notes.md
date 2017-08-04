@@ -30,6 +30,12 @@ model = keras.models.load_model('trained_model.h5')
 predictions = model.predict(new_data)
 ```
 
+You can also add ReLU activation function to each layer:
+
+```py
+model.add(Dense(32, input_dim=9, activation='relu'))
+```
+
 # Special Layers:
 
 ## convolutional
