@@ -8,6 +8,10 @@ Just one of the things I'm learning. https://github.com/hchiam/learning
 
 https://github.com/hchiam/learning-keras/blob/master/image_classifier.py
 
+# High-Level Notes
+
+https://github.com/hchiam/learning-keras/blob/master/high-level-notes.md
+
 # Tutorial Notes
 
 https://github.com/hchiam/learning-keras/blob/master/tutorial-notes.md
