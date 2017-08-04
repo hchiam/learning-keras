@@ -246,4 +246,9 @@ Large data file?
 
 Or:
 
-* Use google cloud api client library for any supported language to call model from your program.
+* Use google cloud api client library for any supported programming language to call model from your program.
+
+# Use Model from Google Cloud in Software Written in Any Programming Language
+
+https://developers.google.com/api-client-library/
+
