@@ -1,4 +1,5 @@
 # example code to make use of the pre-trained image classification model ResNet50
+# NOTE: need internet connection to download for first time
 # original source code: https://keras.io/applications/
 
 from keras.applications.resnet50 import ResNet50
