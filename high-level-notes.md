@@ -30,6 +30,21 @@ model = keras.models.load_model('trained_model.h5')
 predictions = model.predict(new_data)
 ```
 
+# Keras Comes With Pre-Trained Models Installed:
+
+VGG, **ResNet50**, Inception-v3, and **Xception** can recognize 1000 objects.
+
+You can also fine-tune/adapt them to recognize new objects too.
+
+You'll need to reshape input data to match to the model's number of input neurons; "match the plug to the socket".
+
+```py
+from keras.preprocessing import image
+img = image.load_img(image_file, target_size=(224, 224))
+```
+
+See more at https://github.com/hchiam/learning-keras/blob/master/image_classifier.py
+
 # Special Layers:
 
 ## convolutional
