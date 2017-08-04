@@ -112,3 +112,13 @@ Get back in original units:
 prediction = prediction - scaler.min_[8]
 prediction = prediction / scaler.scale_[8]
 ```
+
+# Reuse Model:
+
+```py
+model = keras.models.load_model('trained_model.h5')
+predictions = model.predict(new_data)
+prediction = predictions[0][0]
+prediction = prediction - scaler.min_[8]
+prediction = prediction / scaler.scale_[8]
+```
