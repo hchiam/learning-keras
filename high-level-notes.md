@@ -85,6 +85,7 @@ model.add(Dense(1))
 **Verbose:** Show more details on the training print-outs.
 
 ```py
+# train
 model.fit(
   training_data, 
   expected_output, 
@@ -93,5 +94,6 @@ model.fit(
   verbose=2
 )
 
-error_rate = model.evaluate(testing_data, expected_output)
+# test
+error_rate = model.evaluate(testing_data, expected_output, verbose=0)
 ```
