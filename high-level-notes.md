@@ -10,7 +10,7 @@ keras = quick building and testing/experimenting
 ```py
 # model
 model = keras.models.Sequential()
-# model.add(keras.layers.Dense())
+# model.add(keras.layers.Dense()) # or: from keras.layers import *
 model.add(Dense(32, input_dim=9)) # input layer
 model.add(Dense(128))
 model.add(Dense(1))
