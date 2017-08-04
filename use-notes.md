@@ -203,6 +203,47 @@ model_builder.save()
 
 In `exported_model` folder (as named above), there should be a `variables` folder and a `saved_model.pb` Google's protobuf format. Ready for uploading to the cloud!
 
-console.cloud.google.com
+## https://console.cloud.google.com
 
-Google cloud SDK.
+* Project
+* 3 lines icon -> API Manager -> Library -> Google Cloud Machine Learning -> Machine Learning Engine API -> enable it!
+* 3 lines icon -> Billing (to enable services)
+
+## Google cloud SDK: https://cloud.google.com/sdk/downloads
+
+* Ctrl+f: "Run the interactive installer to download and install the latest release"
+* Interactive installer
+* Install the SDK
+* Activate the SDK in Terminal: `gcloud init`
+
+## Upload and Use Cloud-Based Model
+
+1. Upload bucket to cloud
+2. Create model
+
+* Terminal: navigate to model folder, and then create bucket: for example `gsutil mb -l us-central1 gs://keras-class-1000`
+  * `mb` = make bucket
+  * `1000` may be different for you
+* Terminal: upload bucket: for example `gsutil cp -R exported_model/* gs://keras-class-1000/earnings_v1/`
+  * `cp` = copy
+  * `-R` = recursive, so sub-folders too
+* Terminal: create new model: for example `gcloud ml-engine models create earnings --regions us-central1`
+  * model will be called `earnings`
+* Terminal: tell Google which files should be published as first version of model: for example `gcloud ml-engine versions create v1 --model=earnings --origin=gs://keras-class-1000/earnings_v1/`
+  * `v1` = your defined version name
+  * `--model` to specify model to create version under
+  * (then wait)
+
+Small data set to test on?
+
+* Terminal: try it out: for example: `gcloud ml-engine predict --model=earnings --json-instances=sample_input_prescaled.json`
+  * `--json-instances` to specify local input data file to try it on
+
+Large data file?
+
+* Upload file to cloud storage bucket.
+* Use `gcloud` command to make prediction from that file.
+
+Or:
+
+* Use google cloud api client library for any supported language to call model from your program.
