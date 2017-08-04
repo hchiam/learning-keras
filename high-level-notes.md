@@ -36,6 +36,14 @@ You can also add ReLU activation function to each layer:
 model.add(Dense(32, input_dim=9, activation='relu'))
 ```
 
+And then a linear activation function for the final output:
+
+```py
+model.add(Dense(1, activation='linear'))
+# or by default:
+model.add(Dense(1))
+```
+
 # Special Layers:
 
 ## convolutional
