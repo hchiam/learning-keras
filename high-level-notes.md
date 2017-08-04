@@ -11,7 +11,7 @@ keras = quick building and testing/experimenting
 # model
 model = keras.models.Sequential()
 # model.add(keras.layers.Dense())
-model.add(Dense(32, input_dim=0)) # input layer
+model.add(Dense(32, input_dim=9)) # input layer
 model.add(Dense(128))
 model.add(Dense(1))
 model.compile(loss='mean_squared_error', optimizer='adam')
