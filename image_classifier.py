@@ -17,7 +17,7 @@ x = preprocess_input(x) # scale input to range used in ResNet50
 preds = model.predict(x)
 # decode the results into a list of tuples (class, description, probability)
 # (one such list for each sample in the batch)
-print('Predicted:', decode_predictions(preds, top=3)[0]) # decode_predictions gives top predictions, like IBM's Watson in Jeopardy
+print('Predicted:', decode_predictions(preds, top=3)[0]) # ResNet50's decode_predictions gives top 5 predictions, like IBM's Watson in Jeopardy
 
 # [('n02504458', 'African_elephant', 0.68460453), ('n01871265', 'tusker', 0.27114037), ('n02504013', 'Indian_elephant', 0.044251136)]
 # identified African elephant image: https://upload.wikimedia.org/wikipedia/commons/6/6a/African_Forest_Elephant.jpg
