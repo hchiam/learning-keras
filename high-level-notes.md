@@ -97,3 +97,18 @@ model.fit(
 # test
 error_rate = model.evaluate(testing_data, expected_output, verbose=0)
 ```
+
+# Re-Shape Predictions:
+
+To just get first value for first prediction:
+
+```py
+prediction = predictions[0][0]
+```
+
+Get back in original units:
+
+```py
+prediction = prediction - scaler.min_[8]
+prediction = prediction / scaler.scale_[8]
+```
