@@ -30,20 +30,6 @@ model = keras.models.load_model('trained_model.h5')
 predictions = model.predict(new_data)
 ```
 
-You can also add ReLU activation function to each layer:
-
-```py
-model.add(Dense(32, input_dim=9, activation='relu'))
-```
-
-And then a linear activation function for the final output:
-
-```py
-model.add(Dense(1, activation='linear'))
-# or by default:
-model.add(Dense(1))
-```
-
 # Special Layers:
 
 ## convolutional
@@ -74,3 +60,18 @@ scaled_data2 = scaler.transform(training_data2) # apply the same transform
 # rescale back to original units using: scaler.scale_[8] and scaler.min_[8]
 ```
 
+# Activation Functions:
+
+You can also add ReLU activation function to each layer:
+
+```py
+model.add(Dense(32, input_dim=9, activation='relu'))
+```
+
+And then a linear activation function for the final output:
+
+```py
+model.add(Dense(1, activation='linear'))
+# or by default:
+model.add(Dense(1))
+```
