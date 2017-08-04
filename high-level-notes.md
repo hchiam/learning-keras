@@ -75,3 +75,23 @@ model.add(Dense(1, activation='linear'))
 # or by default:
 model.add(Dense(1))
 ```
+
+# More Training Specs:
+
+**Epochs:** Tell keras how many passes (epochs) to do. (Test to tune performance but also stop early to avoid overfitting.)
+
+**Shuffle:** Shuffle the data.
+
+**Verbose:** Show more details on the training print-outs.
+
+```py
+model.fit(
+  training_data, 
+  expected_output, 
+  epochs=50,
+  shuffle=True,
+  verbose=2
+)
+
+error_rate = model.evaluate(testing_data, expected_output)
+```
