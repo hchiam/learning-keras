@@ -170,3 +170,39 @@ model.add(Dense(50, input_dim=9, activation='relu', name='layer_1'))
 ```
 
 In Terminal: `tensorboard --log_dir=<logs folder>` (make sure that `<logs folder>` is the parent folder of any sub-folders for different runs). Then go to the URL that prints out to see TensorBoard. Graphs tab = flow chart. Scalars tab = compare runs from different sub-folders.
+
+# Use Trained Keras Model as TensorFlow Code in Google Cloud
+
+Export as TensorFlow model:
+
+```py
+import tensorflow as tf
+model_builder = tf.saved_model.builder.SavedModelBuilder('exported_model') # exported_model is folder to save in
+inputs = {
+  'input': tf.saved_model.utils.build_tensor_info(model.input) # just get input info from keras model
+}
+outputs = {
+  'earnings': tf.saved_model.utils.build_tensor_info(model.output) # just get output info from keras model
+}
+# this "function definition" will be the same every time
+signature_def = tf.saved_model.signature_def_utils.build_signature_def(
+  inputs=inputs,
+  outputs=outputs,
+  method_name=tf.saved_model.signature_constants.PREDICT_METHOD_NAME
+)
+# save both structure and trained weights
+model_builder.add_meta_graph_and_variables(
+  K.get_session(), # reference to current keras session
+  tags=[tf.saved_model.tag_constants.SERVING], # tag to know meant for serving users
+  signature_def_map={ # pass in signature_def from above, and this is also same every time
+    tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY: classification_signature,
+  }
+)
+model_builder.save()
+```
+
+In `exported_model` folder (as named above), there should be a `variables` folder and a `saved_model.pb` Google's protobuf format. Ready for uploading to the cloud!
+
+console.cloud.google.com
+
+Google cloud SDK.
