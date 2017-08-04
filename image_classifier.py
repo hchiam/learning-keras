@@ -11,8 +11,8 @@ model = ResNet50(weights='imagenet')
 img_path = 'elephant.jpg'
 img = image.load_img(img_path, target_size=(224, 224))
 x = image.img_to_array(img)
-x = np.expand_dims(x, axis=0)
-x = preprocess_input(x)
+x = np.expand_dims(x, axis=0) # add 4th dimension since inputting 1 image but keras expects list of images
+x = preprocess_input(x) # scale input to range used in ResNet50
 
 preds = model.predict(x)
 # decode the results into a list of tuples (class, description, probability)
