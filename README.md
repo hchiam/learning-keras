@@ -8,9 +8,9 @@ Just one of the things I'm learning. https://github.com/hchiam/learning
 
 https://github.com/hchiam/learning-keras/blob/master/image_classifier.py
 
-# High-Level Notes
+# Use Notes
 
-https://github.com/hchiam/learning-keras/blob/master/high-level-notes.md
+https://github.com/hchiam/learning-keras/blob/master/use-notes.md
 
 # Tutorial Notes
 
