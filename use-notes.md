@@ -1,3 +1,5 @@
+Based on: https://www.linkedin.com/learning/building-deep-learning-applications-with-keras-2-0
+
 # Use What When:
 keras = higher level coding that can use tensorflow or theano
 
