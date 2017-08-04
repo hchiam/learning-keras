@@ -14,7 +14,7 @@ model = keras.models.Sequential()
 model.add(Dense(32, input_dim=9)) # input layer
 model.add(Dense(128))
 model.add(Dense(1))
-model.compile(loss='mean_squared_error', optimizer='adam')
+model.compile(loss='mse', optimizer='adam') # mse = mean_squared_error
 
 # train
 mode.fit(training_data, expected_output)
