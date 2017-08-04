@@ -5,7 +5,7 @@ tensorflow = more customization
 
 keras = quick building and testing/experimenting
 
-# Basic flow:
+# Basic Flow:
 
 ```py
 # model
@@ -28,4 +28,22 @@ model.save('trained_model.h5')
 # evaluate (new predictions)
 model = keras.models.load_model('trained_model.h5')
 predictions = model.predict(new_data)
+```
+
+# Special Layers:
+
+## convolutional
+
+= images/spatial data
+
+```
+keras.layers.convolutional.Conv2D()
+```
+
+## recurrent
+
+= memory for sequential data, like sentences, where previous data acts as "context"
+
+```
+keras.layers.recurrent.LSTM()
 ```
