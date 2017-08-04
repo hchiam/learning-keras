@@ -25,7 +25,7 @@ error_rate = model.evaluate(testing_data, expected_output)
 # save
 model.save('trained_model.h5')
 
-# evaluate (new predictions)
+# predict (one new data)
 model = keras.models.load_model('trained_model.h5')
 predictions = model.predict(new_data)
 ```
